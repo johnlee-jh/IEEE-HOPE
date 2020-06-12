@@ -1,4 +1,6 @@
-# Liebling-IEEE
+# Liebling-IEEE -- John
+
+## This PR has specific handlebar themes for the HOPE page (hope.hbs). The HOPE website and its contents are under HOPE.html.
 
 ## How to Install Ghost for Development
 1. Download NodeJS
