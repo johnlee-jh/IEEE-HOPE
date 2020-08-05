@@ -3,11 +3,13 @@
 ## HOPE Specific Files
 This PR has specific handlebar themes for the HOPE page (hope.hbs, hope.html, and hope.css)
 
-hope.css is added into assets/css/ and the html body of hope.html is inserted into hope.hbs
+HOPE files are in the following locations:
+
+1. HOPE CSS is added into assets/css/hope.css
+2. Html body of hope.html is inserted into hope.hbs just before {{contents}}
+3. hope.html (with css) is also included for backup
 
 Adding a category in routes.yaml to direct /hope/ to the hope.hbs template should make the hope page work
-
-The HOPE website and its contents are under hope.html (for backup).
 
 ## How to Install Ghost for Development
 1. Download NodeJS
