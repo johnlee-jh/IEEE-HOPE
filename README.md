@@ -1,4 +1,4 @@
-# Liebling-IEEE -- John
+# Liebling-IEEE -- For HOPE
 
 ## HOPE Specific Files
 This PR has specific handlebar themes for the HOPE page (hope.hbs, hope.html, and hope.css)
