@@ -1,6 +1,8 @@
 # Liebling-IEEE -- John
 
-## This PR has specific handlebar themes for the HOPE page (hope.hbs). The HOPE website and its contents are under HOPE.html.
+## HOPE Specific Files
+This PR has specific handlebar themes for the HOPE page (hope.hbs). 
+The HOPE website and its contents are under HOPE.html.
 
 ## How to Install Ghost for Development
 1. Download NodeJS
@@ -18,6 +20,3 @@
 
 ## How to Modify the Theme
 When you modify a file within your current theme, you will have to reload the page to see your changes. For help on actual development, see [https://ghost.org/docs/api/v3/handlebars-themes/](https://ghost.org/docs/api/v3/handlebars-themes/).
-
-## Deployment
-After pushing your branch, make a Pull Request. This will cause a Github Action to trigger and automatically deploy the theme to [https://ghost.andrewkdinh.com/](https://ghost.andrewkdinh.com/) under the name `dev-liebling`. If it looks like the theme did not update, then please head to the admin console at [https://ghost.andrewkdinh.com/ghost](https://ghost.andrewkdinh.com/ghost) and change the theme to `dev-liebling`.
