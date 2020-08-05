@@ -1,144 +1,555 @@
 {{!--
-This template is used for the HOPE page.
+This template is used for the posts that are marked as pages.
 --}}
 
-<!DOCTYPE html>
-<html lang="{{@site.lang}}">
-  <head>
-    {{!-- Document Settings --}}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
 
-    {{!-- Base Meta --}}
-    <title>{{meta_title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+  <div class="main-wrap">
+    {{!-- Special header.hbs partial to generate the <header> tag --}}
+    {{> header background=feature_image}}
+    {{!-- Inject styles of the hero image to make it responsive --}}
+    {{> hero background=feature_image}}
+    <div class="m-hero__content" data-aos="fade-down">
+      <h1 class="m-hero-title bigger">{{title}}</h1>
+      {{#if custom_excerpt}}
+        <p class="m-hero-description">{{custom_excerpt}}</p>
+      {{/if}}
+    </div>
+    </section>
+    <main>
+      <article>
+        <div class="l-content">
+          <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
+            <div class="l-post-content">
+              <div class="pos-relative js-post-content">
+                <div>
 
-    {{!-- Styles'n'Scripts --}}
-    <style>
-      /* This font-face is here to make icons work if the Ghost instance is installed in a subdirectory */
-      @font-face {
-        font-family: 'icomoon';
-        src: url("{{asset 'fonts/icomoon.eot?o5zacw'}}");
-        src: url("{{asset 'fonts/icomoon.eot?o5zacw#iefix'}}") format('embedded-opentype'),
-        url("{{asset 'fonts/icomoon.ttf?o5zacw'}}") format('truetype'),
-        url("{{asset 'fonts/icomoon.woff?o5zacw'}}") format('woff'),
-        url("{{asset 'fonts/icomoon.svg?o5zacw#icomoon'}}") format('svg');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: Formata;
-        src: url("{{asset 'fonts/formata.otf'}}");
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="{{asset "css/hope.css"}}" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/nav.css"}}" media="screen">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
-    {{!-- This #block helper will pull data from the hero partial 
-    to inject styles of the hero image to make it responsive --}}
-    {{{block "herobackground"}}}
 
-    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
-    {{ghost_head}}
+<!-- Start of Content -->
+<div class="background-box row" style="background-color: white;">
 
-    {{!-- This variable is used to make the search form work --}}
-    <script>
-      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
-      const ghostHost = "{{@site.url}}"
-      // @license-end
-    </script>
 
-    {{!-- This script loads the Google font asynchronously --}}
-    <script>
-      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
-      WebFontConfig = {
-        google: { families: ['Source+Sans+Pro:400,600,700&display=swap'] }
-      };
+<div style="margin-left: 10%; margin-right: 10%;"> <!-- EDIT THIS RESPONSIVE -->
+<div style="height: 50px;"></div> <!-- EDIT THIS RESPONSIVE -->
 
-      (function (d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-        wf.async = true;
-        s.parentNode.insertBefore(wf, s);
-      })(document);
-      // @license-end
-    </script>
-  </head>
-  <body class="{{body_class}}">
-    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-    {
-            {{!-- Everything inside the #post tags pulls data from the post --}}
-      {{#post}}
-        <div class="main-wrap">
-          {{!-- Special header.hbs partial to generate the <header> tag --}}
-          {{> header background=feature_image}}
-          {{!-- Inject styles of the hero image to make it responsive --}}
-          {{> hero background=feature_image}}
-          <div class="m-hero__content" data-aos="fade-down">
-            <h1 class="m-hero-title bigger">{{title}}</h1>
-            {{#if custom_excerpt}}
-              <p class="m-hero-description">{{custom_excerpt}}</p>
-            {{/if}}
-          </div>
-          </section>
-          <main>
-            <article>
-              <div class="l-content">
-                <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
-                  <div class="l-post-content">
-                    <div class="pos-relative js-post-content">
-                      {{content}}
-                    </div>
-                  </div>
-                </div>
+<div class="topnav" id="myTopnav">
+	<b>Contents: </b>
+	<a href="#about">About</a>
+	<a href="#timeline">Timeline</a>
+	<a href="#register">Register</a>
+	<a href="#notice">Notices</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	  <i class="fa fa-bars"></i>
+	</a>
+</div>
+
+<hr style="border: 1px solid grey;">
+
+<div style="height: 50px;"></div>
+
+<div id="#about">
+	<div class="row">
+		<div class="keep-column intro-left">
+			<b style="font-size: 40px; font-weight: 650;">Welcome to HOPE!</b>
+			<div style="height: 20px;"></div>
+			<n style="font-size: 17px; font-weight: 300;">This course introduces printed circuit board (PCB) design 
+				and layout practices and concerns. It is intended for students with some experience with circuits who 
+				are interested in learning or improving their PCB design and fabrication skills, and particularly those 
+				who are part of or intend to join engineering student organizations with working knowledge in PCB design.
+			</n>
+			<br><br>
+			<n style="font-size: 17px;">
+				<b>Time:</b> Wednesday 8-10 PM<br>
+				<b>Location:</b> 140 Cory Hall<br>
+				<b>Units: </b>1<br>
+			</n>
+		</div>
+
+		<div class="keep-column intro-filler" style="margin-top: 20px;"></div>
+
+		<div class="keep-column intro-right">
+		<div style="width: 100%;">
+			<div style="height: 10px;"></div>
+			<b style="font-size: 30px; font-weight: 500;">Instructors</b><br><br>
+			<div>
+				<div class="">
+					[image] Leon Wu
+				</div>
+				<div class="">
+					[image] Kevin Zheng
+				</div>
+				<div class="">
+					[image] Jeffrey Ni
+				</div>
+			</div>
+			<div style="height: 40px;"></div>
+			<b style="font-size: 30px; font-weight: 500;">Contact</b><br><br>
+			<n style="font-size: 17px; font-weight: 400;">
+				ieee-hope@lists.berkeley.edu
+			</n>
+		</div>
+		</div>
+	</div>
+</div>
+<div style="height: 50px;"></div>
+<hr style="border: 1px solid grey;">
+
+<div id="timeline" style="min-width: 1000px;">
+	<div style="height: 50px;"></div>
+	<b style="font-size: 40px; font-weight: 650;">Timeline</b>
+	<div style="height: 50px;"></div>
+
+	<div class="timeline-head">
+		<div class="row">
+			<div class="column timeline-h1" style="float: left;">
+				Week
+			</div>
+			<div class="column timeline-h2" style="float: left;">
+				Title
+			</div>
+			<div class="column timeline-h3" style="float: left;">
+				Content
+			</div>
+			<div class="column timeline-h4" style="float: left;">
+				Lab
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					1
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Introduction
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				• What is HOPE? <br>
+				• What is a PCB? <br>
+				• PCB EDA Tools <br>
+				• General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">Intro to KiCad</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					2
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Schematics & Components, Pt.1
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+					• PCB Design <br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;> Design Abstraction for PCBs, Introduction to Stakeholders <br>
+
+					• Schematics for <br>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;> Connectivity of Components, Communication <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">Schematics & KiCad</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					3
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Schematics & Components, Pt.2
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+					Components <br>
+					Component in KiCad schematics,
+					Selecting components, and
+					ICs and Product Families <br>
+					Design Compromise <br>
+					Introduction to DFX
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">USB Charger: Component Selection and Schematic Creation</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					4
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.1
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">USB Charger: Footprint Creation and Board Setup</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					5
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.2
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">USB Charger: Layout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					6
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.3
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					7
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.4
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					8
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Microcontrollers and Even More Layout Concerns?
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">Microbug layout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					9
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Spring Break
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				Enjoy your spring break!
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					10
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Even more PCB Layout? and Design Reviews
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					11
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Assembly
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					12
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Fun Lecture
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					13
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Project Assembly
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					14
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Project Presentations
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div style="height: 50px;"></div>
+</div>
+
+<hr style="border: 1px solid grey;">
+
+<div style="height: 50px;"></div>
+
+<div id="register">
+	<b style="font-size: 40px; font-weight: 650;">Register</b>
+	<div style="height: 30px;"></div>
+	<n style="font-size: 17px; font-weight: 300;"> Interested in this course? <br>
+		Go to the <a href="">DeCal registration website</a> to register for Fall 2020.
+	</n>
+</div>
+
+<div style="height: 50px;"></div>
+
+<hr style="border: 1px solid grey;">
+
+<div id="register">
+	<b style="font-size: 40px; font-weight: 650;">Notices</b>
+	<div style="height: 30px;"></div>
+	{{content}}
+</div>
+
+<div style="height: 300px;"></div>
+
+</div>
+</div>
+
+
+</div>
+<!-- End of Content-->
               </div>
-            </article>
-          </main>
+            </div>
+          </div>
         </div>
-      {{/post}}
+      </article>
+    </main>
+  </div>
+{{/post}}
 
-      {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
-      {{#contentFor "scripts"}}
-        <script defer src="{{asset "js/page.js"}}"></script>
-      {{/contentFor}}
-            
-
-
-
-
-
-
-
-
-
-
-    }
-
-    {{!-- Search form --}}
-    {{> search}}
-
-    {{!-- The footer --}}
-    {{> footer}}
-
-    {{!-- Notifications alerts --}}
-    {{> "notifications"}}
-
-    {{!-- Common scripts shared between pages --}}
-    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CPromise%2CArray.prototype.includes%2CString.prototype.endsWith%2CString.prototype.startsWith%2CObject.assign%2CNodeList.prototype.forEach"></script>
-    <script defer src="https://unpkg.com/@tryghost/content-api@1.2.7/umd/content-api.min.js"></script>
-    <script defer src="{{asset "js/manifest.js"}}"></script>
-    <script defer src="{{asset "js/vendor.js"}}"></script>
-    <script defer src="{{asset "js/app.js"}}"></script>
-    <script src="{{asset "js/header.js"}}"></script>
-    
-    {{!-- The #block helper will pull in data from the #contentFor other template files --}}
-    {{{block "scripts"}}}
-
-    {{!-- Ghost outputs important scripts and data with this tag --}}
-    {{ghost_foot}}
-  </body>
-</html>
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+  <script defer src="{{asset "js/page.js"}}"></script>
+{{/contentFor}}

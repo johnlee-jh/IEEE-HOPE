@@ -11,6 +11,10 @@ routes:
   /account/:
     template: members/account
     data: page.account
+  /hope/:
+    template: hope.hbs
+    data: hope.hbs
+
 
 collections:
   /:

@@ -1,8 +1,9 @@
 # Liebling-IEEE -- John
 
 ## HOPE Specific Files
-This PR has specific handlebar themes for the HOPE page (hope.hbs). 
-The HOPE website and its contents are under HOPE.html.
+This PR has specific handlebar themes for the HOPE page (hope.hbs).
+Adding /hope/ to direct to the hope.hbs template should work.
+The HOPE website and its contents are under HOPE.html (for backup).
 
 ## How to Install Ghost for Development
 1. Download NodeJS

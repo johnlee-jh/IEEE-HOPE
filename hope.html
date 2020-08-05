@@ -1,436 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>HOPE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>HOPE</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-      /* This font-face is here to make icons work if the Ghost instance is installed in a subdirectory */
-      @font-face {
-        font-family: 'icomoon';
-        src: url("/assets/fonts/icomoon.eot?o5zacw?v=203b4361c3");
-        src: url("/assets/fonts/icomoon.eot?o5zacw#iefix?v=203b4361c3") format('embedded-opentype'),
-        url("/assets/fonts/icomoon.ttf?o5zacw?v=203b4361c3") format('truetype'),
-        url("/assets/fonts/icomoon.woff?o5zacw?v=203b4361c3") format('woff'),
-        url("/assets/fonts/icomoon.svg?o5zacw#icomoon?v=203b4361c3") format('svg');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: Formata;
-        src: url("/assets/fonts/formata.otf?v=203b4361c3");
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=203b4361c3" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/nav.css?v=203b4361c3" media="screen">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
-    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+<link rel="stylesheet" href="hope.css">
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="canonical" href="http://localhost:2368/hope/" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-    
-    <meta property="og:site_name" content="UC Berkeley IEEE" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="HOPE" />
-    <meta property="og:description" content="Hands-On PCB Engineering Engineering Decal run by the UC Berkeley IEEE Student Branch Semester: Spring 2020  Units: 1  Time: Wednesday 8-10 PM  Location: 140 Cory Hall  Instructors: Leon Wu, Kevin Zheng, Jeffrey Ni  Course Contact Email: ieee-hope@lists.berkeley.edu  Zoom for classes and Office Hours:  Please find info on" />
-    <meta property="og:url" content="http://localhost:2368/hope/" />
-    <meta property="article:tag" content="HOPE" />
-    
-    <meta property="article:publisher" content="https://www.facebook.com/pages/UC-Berkeley-IEEE/164764630218416" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="HOPE" />
-    <meta name="twitter:description" content="Hands-On PCB Engineering Engineering Decal run by the UC Berkeley IEEE Student Branch Semester: Spring 2020  Units: 1  Time: Wednesday 8-10 PM  Location: 140 Cory Hall  Instructors: Leon Wu, Kevin Zheng, Jeffrey Ni  Course Contact Email: ieee-hope@lists.berkeley.edu  Zoom for classes and Office Hours:  Please find info on" />
-    <meta name="twitter:url" content="http://localhost:2368/hope/" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Leon Wu" />
-    <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="HOPE" />
-    
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "publisher": {
-        "@type": "Organization",
-        "name": "UC Berkeley IEEE",
-        "url": "http://localhost:2368/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "/blog/content/images/2020/02/IEEE-Logo-Only-1.png"
-        }
-    },
-    "author": {
-        "@type": "Person",
-        "name": "Leon Wu",
-        "sameAs": []
-    },
-    "headline": "HOPE",
-    "url": "http://localhost:2368/hope/",
-    "keywords": "HOPE",
-    "description": "Hands-On PCB Engineering\nEngineering Decal run by the UC Berkeley IEEE Student Branch\n\n\n--------------------------------------------------------------------------------\n\nSemester: Spring 2020 [https://decal.berkeley.edu/courses/5133]\nUnits: 1\nTime: Wednesday 8-10 PM\nLocation: 140 Cory Hall\nInstructors: Leon Wu, Kevin Zheng, Jeffrey Ni\nCourse Contact Email: ieee-hope@lists.berkeley.edu\n\nZoom for classes and Office Hours:\n\n&gt; Please find info on BCourses. Removed from here due to safety reasons.\n\n\n",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://localhost:2368/"
-    }
-}
-    </script>
+<style>
 
-    <meta name="generator" content="Ghost 3.13" />
-    <link rel="alternate" type="application/rss+xml" title="UC Berkeley IEEE" href="http://localhost:2368/rss/" />
+</style>
+<body>
 
-    <script>
-      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
-      const ghostHost = "http://localhost:2368"
-      // @license-end
-    </script>
+<div>
+<!-- Start of Content -->
+<div class="background-box row" style="background-color: white;">
 
-    <script>
-      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
-      WebFontConfig = {
-        google: { families: ['Source+Sans+Pro:400,600,700&display=swap'] }
-      };
 
-      (function (d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-        wf.async = true;
-        s.parentNode.insertBefore(wf, s);
-      })(document);
-      // @license-end
-    </script>
-  </head>
-  <body class="page-template page-hope tag-hope">
-    
+<div style="margin-left: 10%; margin-right: 10%;"> <!-- EDIT THIS RESPONSIVE -->
+<div style="height: 500px;"></div> <!-- EDIT THIS RESPONSIVE -->
 
-  <div class="main-wrap">
-    <header class="home-header">
-<nav class="site-nav">
-	<a href="http://localhost:2368">
-		<div class="nav-left">
-			<img src="/assets/images/logo.png?v=203b4361c3">
-				<div class="lockup-template">
-					<div class="branch">UC Berkeley</div>
-					<div>IEEE Student Branch</div>
-				</div>
-		</div>
+<div class="topnav" id="myTopnav">
+	<b>Contents: </b>
+	<a href="#about">About</a>
+	<a href="#timeline">Timeline</a>
+	<a href="#register">Register</a>
+	<a href="#notices">Notices</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	  <i class="fa fa-bars"></i>
 	</a>
-	<div class="nav-right">
-		<div class="open-dropdown"><i class="fas fa-bars"></i></div>
-		<div class="dropdown">
-			<div class="close-dropdown-wrap">
-				<div class="close-dropdown"><i class="fas fa-times"></i></div>
+</div>
+
+<hr style="border: 1px solid grey;">
+
+<div style="height: 50px;"></div>
+
+<div id="#about">
+	<div class="row">
+		<div class="keep-column intro-left">
+			<b style="font-size: 40px; font-weight: 650;">Welcome to HOPE!</b>
+			<div style="height: 20px;"></div>
+			<n style="font-size: 17px; font-weight: 300;">This course introduces printed circuit board (PCB) design 
+				and layout practices and concerns. It is intended for students with some experience with circuits who 
+				are interested in learning or improving their PCB design and fabrication skills, and particularly those 
+				who are part of or intend to join engineering student organizations with working knowledge in PCB design.
+			</n>
+			<br><br>
+			<n style="font-size: 17px;">
+				<b>Time:</b> Wednesday 8-10 PM<br>
+				<b>Location:</b> 140 Cory Hall<br>
+				<b>Units: </b>1<br>
+			</n>
+		</div>
+
+		<div class="keep-column intro-filler" style="margin-top: 20px;"></div>
+
+		<div class="keep-column intro-right">
+		<div style="width: 100%;">
+			<div style="height: 10px;"></div>
+			<b style="font-size: 30px; font-weight: 500;">Instructors</b><br><br>
+			<div>
+				<div class="">
+					[image] Leon Wu
+				</div>
+				<div class="">
+					[image] Kevin Zheng
+				</div>
+				<div class="">
+					[image] Jeffrey Ni
+				</div>
 			</div>
-                <a href="http://localhost:2368/events/">
-	<div class="nav-btn-container">
-		<svg viewBox="-1.5 -1.5 183 63" xmlns="http://www.w3.org/2000/svg">
-			<polygon points="0,30 30,0 180,0 180,30 150,60 0,60" fill="none" stroke="white" stroke-width="3"></polygon>
-		</svg>
-		<div class="btn">
-			<div class="center txt">Events</div>
+			<div style="height: 40px;"></div>
+			<b style="font-size: 30px; font-weight: 500;">Contact</b><br><br>
+			<n style="font-size: 17px; font-weight: 400;">
+				ieee-hope@lists.berkeley.edu
+			</n>
+		</div>
 		</div>
 	</div>
-</a>
-<a href="http://localhost:2368/industry/">
-	<div class="nav-btn-container">
-		<svg viewBox="-1.5 -1.5 183 63" xmlns="http://www.w3.org/2000/svg">
-			<polygon points="0,30 30,0 180,0 180,30 150,60 0,60" fill="none" stroke="white" stroke-width="3"></polygon>
-		</svg>
-		<div class="btn">
-			<div class="center txt">Industry</div>
-		</div>
-	</div>
-</a>
-<a href="http://localhost:2368/hope/">
-	<div class="nav-btn-container">
-		<svg viewBox="-1.5 -1.5 183 63" xmlns="http://www.w3.org/2000/svg">
-			<polygon points="0,30 30,0 180,0 180,30 150,60 0,60" fill="none" stroke="white" stroke-width="3"></polygon>
-		</svg>
-		<div class="btn">
-			<div class="center txt">HOPE</div>
-		</div>
-	</div>
-</a>
-<a href="http://localhost:2368/micromouse/">
-	<div class="nav-btn-container">
-		<svg viewBox="-1.5 -1.5 183 63" xmlns="http://www.w3.org/2000/svg">
-			<polygon points="0,30 30,0 180,0 180,30 150,60 0,60" fill="none" stroke="white" stroke-width="3"></polygon>
-		</svg>
-		<div class="btn">
-			<div class="center txt">Micromouse</div>
-		</div>
-	</div>
-</a>
-<a href="http://localhost:2368/apply/">
-	<div class="nav-btn-container">
-		<svg viewBox="-1.5 -1.5 183 63" xmlns="http://www.w3.org/2000/svg">
-			<polygon points="0,30 30,0 180,0 180,30 150,60 0,60" fill="none" stroke="white" stroke-width="3"></polygon>
-		</svg>
-		<div class="btn">
-			<div class="center txt">Apply</div>
-		</div>
-	</div>
-</a>
+</div>
+<div style="height: 50px;"></div>
+<hr style="border: 1px solid grey;">
 
+<div id="timeline" style="min-width: 1000px;">
+	<div style="height: 50px;"></div>
+	<b style="font-size: 40px; font-weight: 650;">Timeline</b>
+	<div style="height: 50px;"></div>
+
+	<div class="timeline-head">
+		<div class="row">
+			<div class="column timeline-h1" style="float: left;">
+				Week
+			</div>
+			<div class="column timeline-h2" style="float: left;">
+				Title
+			</div>
+			<div class="column timeline-h3" style="float: left;">
+				Content
+			</div>
+			<div class="column timeline-h4" style="float: left;">
+				Lab
+			</div>
 		</div>
 	</div>
-	<div class="overlay"></div>
-</nav>
-</header>    
-  <section class="m-hero no-picture " data-aos="fade">
-    <div class="m-hero__content" data-aos="fade-down">
-      <h1 class="m-hero-title bigger">HOPE</h1>
-    </div>
-    </section>
-    <main>
-      <article>
-        <div class="l-content">
-          <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
-            <div class="l-post-content">
-              <div class="pos-relative js-post-content">
-                <p>Hands-On PCB Engineering<br>Engineering Decal run by the UC Berkeley IEEE Student Branch</p><hr><!--kg-card-begin: markdown--><p><strong>Semester:</strong> <a href="https://decal.berkeley.edu/courses/5133">Spring 2020</a><br>
-<strong>Units:</strong> 1<br>
-<strong>Time:</strong> Wednesday 8-10 PM<br>
-<strong>Location:</strong> 140 Cory Hall<br>
-<strong>Instructors:</strong> Leon Wu, Kevin Zheng, Jeffrey Ni<br>
-<strong>Course Contact Email:</strong> <a href="mailto:ieee-hope@lists.berkeley.edu">ieee-hope@lists.berkeley.edu</a></p>
-<p>Zoom for classes and Office Hours:</p>
-<blockquote>
-<p>Please find info on BCourses. Removed from here due to safety reasons.</p>
-</blockquote>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h1 id="weeklytopicsbreakdown">Weekly Topics Breakdown</h1>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week1129introduction"><em>Week 1 (1/29):</em> <a href="https://bcourses.berkeley.edu/files/76702979/download?download_frd=1">Introduction</a></h2>
-<ul>
-<li>What is HOPE?</li>
-<li>What is a PCB?</li>
-<li>PCB EDA Tools</li>
-<li>General PCB Project Workflow</li>
-<li><em>Lab</em>: <a href="https://ieee.berkeley.edu/hope/labs/kicad-intro/kicad-intro.html">Intro to KiCad</a>
-<ul>
-<li><em>note: old site</em></li>
-</ul>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week225schematicscomponentspt1"><em>Week 2 (2/5):</em> <a href="https://bcourses.berkeley.edu/files/76702980/download?download_frd=1">Schematics &amp; Components, Pt.1</a></h2>
-<ul>
-<li>
-<p>PCB <em>Design</em></p>
-<ul>
-<li>Design Abstraction for PCBs</li>
-<li>Introduction to Stakeholders</li>
-</ul>
-</li>
-<li>
-<p>Schematics for</p>
-<ul>
-<li>Connectivity of Components</li>
-<li>Communication</li>
-</ul>
-</li>
-<li>
-<p><em>Lab</em>: <a href="https://ieee.berkeley.edu/hope/labs/schematics-n-kicad/schematics_n_kicad.html">Schematics &amp; KiCad</a></p>
-<ul>
-<li><em>note: old site</em></li>
-</ul>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week3212schematicscomponentspt2"><em>Week 3 (2/12):</em> <a href="https://bcourses.berkeley.edu/files/76702981/download?download_frd=1">Schematics &amp; Components, Pt.2</a></h2>
-<ul>
-<li>Components
-<ul>
-<li>Component in KiCad schematics</li>
-<li>Selecting components</li>
-<li>ICs and Product Families</li>
-</ul>
-</li>
-<li>Design Compromise
-<ul>
-<li>Introduction to DFX</li>
-</ul>
-</li>
-<li><em>Lab</em>: <a href="http://localhost:2368/blog/usb-charger-schematic/">USB Charger: Component Selection and Schematic Creation</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week4219pcblayoutpt1"><em>Week 4 (2/19):</em> <a href="https://bcourses.berkeley.edu/files/76703873/download?download_frd=1">PCB Layout, Pt.1</a></h2>
-<ul>
-<li>Schematic to copper
-<ul>
-<li>Basic PCB structure</li>
-<li>Symbols to Footprints</li>
-<li>PCB physical connectivity</li>
-</ul>
-</li>
-<li>What are Design Rules</li>
-<li><em>Lab</em>: <a href="http://localhost:2368/blog/usb-charger-footprints/">USB Charger: Footprint Creation and Board Setup</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week5226pcblayoutpt2"><em>Week 5 (2/26):</em> <a href="https://bcourses.berkeley.edu/files/76874886/download?download_frd=1">PCB Layout, Pt.2</a></h2>
-<ul>
-<li>PCB Routing - not just autorouter
-<ul>
-<li>Physical problems require physical solutions</li>
-<li>Component Placement</li>
-<li>ECAD-PC board features</li>
-</ul>
-</li>
-<li><em>Lab</em>: <a href="http://localhost:2368/blog/usb-charger-layout/">USB Charger: Layout</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week634pcblayoutpt3"><em>Week 6 (3/4):</em> <a href="https://bcourses.berkeley.edu/files/76874887/download?download_frd=1">PCB Layout, Pt.3</a></h2>
-<ul>
-<li>Layout Complications
-<ul>
-<li>More design rules</li>
-<li>More cowbell</li>
-</ul>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week7311pcblayoutpt4"><em>Week 7 (3/11):</em> <a href="https://bcourses.berkeley.edu/files/76875400/download?download_frd=1">PCB Layout, Pt.4</a></h2>
-<ul>
-<li>
-<p>PCB Manufacturing</p>
-<ul>
-<li>Manufacturing Process</li>
-<li>Layout output files</li>
-</ul>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=ljOoGyCso8s">Cool video of actual fab house</a></p>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="week8318microcontrollersandevenmorelayoutconcerns"><em>Week 8 (3/18):</em> <a href="https://bcourses.berkeley.edu/files/76949279/download?download_frd=1">Microcontrollers and Even More Layout Concerns?</a></h2>
-<ul>
-<li>
-<p>Embedded Systems</p>
-<ul>
-<li>Design Choices</li>
-<li>Firmware</li>
-</ul>
-</li>
-<li>
-<p>Microcontroller Features</p>
-</li>
-<li>
-<p>Simple layout considerations for microcontroller systems</p>
-</li>
-<li>
-<p><em>Lab</em>: <a href="http://localhost:2368/blog/microbug-layout/">Microbug layout</a></p>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><hr>
-<p><strong>Spring Break (3/25)</strong></p>
-<hr>
-<ul>
-<li>
-<p><strong>Week 9 (4/1):</strong> Even more PCB Layout? and Design Reviews</p>
-</li>
-<li>
-<p><strong>Week 10 (4/8):</strong> PCB Assembly</p>
-</li>
-<li>
-<p><strong>Week 11 (4/15):</strong> Fun Lecture</p>
-</li>
-<li>
-<p><strong>Week 12 (4/22): Project Assembly</strong></p>
-</li>
-</ul>
-<blockquote>
-<p>Who knows what the future will bring?</p>
-</blockquote>
-<ul>
-<li><strong>Week 13 (4/29): Project Presentations</strong></li>
-</ul>
-<!--kg-card-end: markdown-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </main>
-  </div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					1
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Introduction
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				• What is HOPE? <br>
+				• What is a PCB? <br>
+				• PCB EDA Tools <br>
+				• General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">Intro to KiCad</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					2
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Schematics & Components, Pt.1
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+					• PCB Design <br>
 
+					&nbsp;&nbsp;&nbsp;&nbsp;> Design Abstraction for PCBs, Introduction to Stakeholders <br>
 
-
-    
-<div class="m-search js-search">
-  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
-    <span class="icon-close"></span>
-  </button>
-  <div class="m-search__content">
-    <form class="m-search__form">
-      <fieldset>
-        <span class="icon-search m-search-icon"></span>
-        <input type="text" class="m-input in-search js-input-search" placeholder="Type to search" aria-label="Type to search">
-      </fieldset>
-    </form>
-    <div class="js-search-results hide"></div>
-    <p class="m-not-found align-center hide js-no-results">
-      No results for your search, please try with something else.
-    </p>
-  </div>
+					• Schematics for <br>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;> Connectivity of Components, Communication <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">Schematics & KiCad</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					3
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Schematics & Components, Pt.2
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+					Components <br>
+					Component in KiCad schematics,
+					Selecting components, and
+					ICs and Product Families <br>
+					Design Compromise <br>
+					Introduction to DFX
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">USB Charger: Component Selection and Schematic Creation</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					4
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.1
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">USB Charger: Footprint Creation and Board Setup</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					5
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.2
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">USB Charger: Layout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					6
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.3
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					7
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Layout, Pt.4
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					8
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Microcontrollers and Even More Layout Concerns?
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+					<a href="">Microbug layout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					9
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Spring Break
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				Enjoy your spring break!
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					10
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Even more PCB Layout? and Design Reviews
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					11
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					PCB Assembly
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					12
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Fun Lecture
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-odd">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					13
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Project Assembly
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="timeline-even">
+		<div class="row">
+			<div class="column timeline-1" style="float: left;">
+				<div class="timeline-content1">
+					14
+					<br> (Date)
+				</div>
+			</div>
+			<div class="column timeline-2" style="float: left;">
+				<div class="timeline-content2">
+					Project Presentations
+				</div>
+			</div>
+			<div class="column timeline-3" style="float: left; text-align: left;">
+				<div class="timeline-content3">
+				> What is HOPE? <br>
+				> What is a PCB? <br>
+				> PCB EDA Tools <br>
+				> General PCB Project Workflow <br>
+				</div>
+			</div>
+			<div class="column timeline-4" style="float: left;">
+				<div class="timeline-content4">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div style="height: 50px;"></div>
 </div>
 
-    
-<footer class="m-footer">
-  <div class="m-footer__content">
-    <p class="m-footer-copyright">
-      <span>UC Berkeley IEEE &copy; 2020</span>
-      <span>&nbsp; &bull; &nbsp;</span>
-      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
-    </p>
+<hr style="border: 1px solid grey;">
 
-    <nav class="m-footer-social">
-        <a href="https://www.facebook.com/pages/UC-Berkeley-IEEE/164764630218416" target="_blank" rel="noopener" aria-label="Facebook">
-          <span class="icon-facebook"></span>
-        </a>
-    </nav>
-    <p class="m-footer-copyright jslicense">
-      <a href="/assets/html/javascript.html?v=203b4361c3" rel="jslicense">JavaScript license information</a>
-    </p>
-  </div>
-</footer>
+<div style="height: 50px;"></div>
 
-    <div class="m-alert success subscribe js-alert" data-notification="subscribe">
-  Great! You&#x27;ve successfully subscribed.
-  <button class="m-alert__close js-notification-close" aria-label="Close">
-    <span class="icon-close"></span>
-  </button>
+<div id="register">
+	<b style="font-size: 40px; font-weight: 650;">Register</b>
+	<div style="height: 30px;"></div>
+	<n style="font-size: 17px; font-weight: 300;"> Interested in this course? <br>
+		Go to the <a href="">DeCal registration website</a> to register for Fall 2020.
+	</n>
 </div>
 
-<div class="m-alert success signup js-alert" data-notification="signup">
-  Great! Next, complete checkout for full access.
-  <button class="m-alert__close js-notification-close" aria-label="Close">
-    <span class="icon-close"></span>
-  </button>
+<div style="height: 50px;"></div>
+
+<hr style="border: 1px solid grey;">
+
+<div id="notices">
+	<b style="font-size: 40px; font-weight: 650;">Notices</b>
+	<div style="height: 30px;"></div>
+	{{content}}
 </div>
 
-<div class="m-alert success signin js-alert" data-notification="signin">
-  Welcome back! You&#x27;ve successfully signed in.
-  <button class="m-alert__close js-notification-close" aria-label="Close">
-    <span class="icon-close"></span>
-  </button>
+<div style="height: 300px;"></div>
+
+<!---->
+
+</div>
 </div>
 
-<div class="m-alert success checkout js-alert" data-notification="checkout">
-  Success! Your account is fully activated, you now have access to all content.
-  <button class="m-alert__close js-notification-close" aria-label="Close">
-    <span class="icon-close"></span>
-  </button>
+<!---->
+
+
+<!-- End of Content-->
 </div>
-    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CPromise%2CArray.prototype.includes%2CString.prototype.endsWith%2CString.prototype.startsWith%2CObject.assign%2CNodeList.prototype.forEach"></script>
-    <script defer src="https://unpkg.com/@tryghost/content-api@1.2.7/umd/content-api.min.js"></script>
-    <script defer src="/assets/js/manifest.js?v=203b4361c3"></script>
-    <script defer src="/assets/js/vendor.js?v=203b4361c3"></script>
-    <script defer src="/assets/js/app.js?v=203b4361c3"></script>
-    <script src="/assets/js/header.js?v=203b4361c3"></script>
-    
-      <script defer src="/assets/js/page.js?v=203b4361c3"></script>
 
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}
+</script>
 
-    
-  </body>
+</body>
 </html>
